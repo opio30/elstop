@@ -1,0 +1,68 @@
+{
+  "name": "etiquetas-tienda-pro",
+  "version": "4.1.0",
+  "description": "Etiquetas Tienda Pro - inventario, promociones y etiquetas termicas",
+  "main": "main.js",
+  "author": "Etiquetas Tienda Pro",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win nsis --x64 --publish never",
+    "build:portable": "electron-builder --win portable --x64 --publish never"
+  },
+  "dependencies": {
+    "electron-updater": "^6.6.2"
+  },
+  "devDependencies": {
+    "electron": "^38.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.etiquetastiendapro.app",
+    "productName": "Etiquetas Tienda Pro",
+    "asar": true,
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Etiquetas Tienda Pro"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "opio30",
+        "repo": "elstop",
+        "releaseType": "release"
+      }
+    ],
+    "artifactName": "Etiquetas-Tienda-Pro-${version}-${arch}.${ext}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opio30/elstop.git"
+  },
+  "homepage": "https://github.com/opio30/elstop",
+  "bugs": {
+    "url": "https://github.com/opio30/elstop/issues"
+  }
+}
