@@ -1,4 +1,4 @@
-# Etiquetas Tienda Pro 4.1.0
+# Etiquetas Tienda Pro 4.2.0
 
 - Perfiles para térmicas de 58 y 80 mm, etiquetas 100×50, A4, Carta y medidas personalizadas.
 - Márgenes, separación, escala del contenido y columnas automáticas en hojas.
@@ -31,6 +31,6 @@ powershell -NoProfile -File .\scripts\Preparar-Release.ps1
 ```
 
 No se ha compilado el EXE ni probado con impresoras físicas. No se publicó GitHub.
-Usa las notas release-notes/v4.1.0.md para esta nueva entrega.
+Usa las notas release-notes/v4.2.0.md para esta nueva entrega.
 La sintaxis JavaScript y los perfiles, emojis y copias se verificaron con un DOM
 simulado. No se pudo ejecutar la revisión visual en navegador en este entorno.

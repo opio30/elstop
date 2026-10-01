@@ -1,12 +1,8 @@
-# 4.1.0 — pendiente de publicación
+# 4.2.0 — código fuente
 
-Impresoras adicionales, diseños de ofertas, emojis y carga de stickers.
-
-# Historial
-
-## 4.0.0 — pendiente de publicación
-
-- Programa original de escritorio con inventario y etiquetas térmicas.
-- Configuración de distribución y actualización mediante opio30/elstop.
-- Compilación local sin publicación automática.
-- Documentación de instalación y primera release; comprobación SHA-256.
+- Identidad Diseñado por EL STOP.
+- Configuración interna de actualizaciones GitHub.
+- Prueba de 10 días con persistencia y detección de retroceso del reloj.
+- Compra con PayPal; licencia permanente con firma Ed25519 por equipo.
+- Herramientas del propietario para emitir licencias tras verificar pagos.
+- Pruebas de expiración, persistencia, corrupción y verificación de firma.

@@ -20,7 +20,3 @@ para GitHub. Se conserva la interfaz y el código de ejecución original. No se 
 instalado dependencias, generado lockfile, compilado el EXE ni probado en Windows.
 No se incluye un ejecutable, certificado digital, instalador probado ni workflow
 que publique automáticamente. El script PowerShell requiere validación en Windows.
-
-## Instalador recibido el 30 de septiembre de 2026
-
-Se recibió VERSION4.1.rar con el instalador 4.1.0, su blockmap y latest.yml. Se verificaron el tamaño y el SHA-512 del instalador contra latest.yml. No se ejecutó el instalador en Windows. El código fuente de este repositorio procede del proyecto preparado; no se ha comprobado byte a byte contra el código empaquetado del instalador.

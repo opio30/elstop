@@ -2,11 +2,11 @@
 
 1. Usa Windows 10 o 11 de 64 bits; esta distribución está configurada para x64.
 2. Abre https://github.com/opio30/elstop/releases y selecciona una release estable.
-3. Descarga `Etiquetas-Tienda-Pro-4.1.0-x64.exe` (cambia la versión según la release).
+3. Descarga `Etiquetas-Tienda-Pro-4.2.0-x64.exe` (cambia la versión según la release).
 4. Opcionalmente, compara su SHA-256 con `SHA256SUMS.txt`:
 
 ```powershell
-Get-FileHash .\Etiquetas-Tienda-Pro-4.1.0-x64.exe -Algorithm SHA256
+Get-FileHash .\Etiquetas-Tienda-Pro-4.2.0-x64.exe -Algorithm SHA256
 ```
 
 5. Ejecuta el instalador y sigue sus instrucciones. No necesitas Node.js ni Git.

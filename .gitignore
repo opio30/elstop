@@ -10,3 +10,7 @@ dist/
 *.key
 .DS_Store
 Thumbs.db
+
+owner-keys/
+owner-records/
+resources/license-public.pem

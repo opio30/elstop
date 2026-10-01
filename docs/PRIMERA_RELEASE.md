@@ -27,7 +27,7 @@ no deben aparecer en el commit. El lockfile debe estar incluido.
 Si Git pide identidad, configura tu nombre y correo antes de continuar.
 
 ```powershell
-git commit -m "chore: preparar Etiquetas Tienda Pro 4.1.0"
+git commit -m "chore: preparar Etiquetas Tienda Pro 4.2.0"
 ```
 
 Este commit es local. Puedes detenerte aquí para revisar todo sin modificar GitHub.
@@ -73,15 +73,15 @@ gh release view $Tag --repo opio30/elstop --web
 ```
 
 Solo después de este paso los usuarios pueden descargar la release pública y
-el actualizador puede detectarla. Para 4.1.1: `npm version patch --no-git-tag-version`,
-actualiza CHANGELOG y crea `release-notes/v4.1.1.md`, usa `npm ci`, compila y revisa,
+el actualizador puede detectarla. Para 4.2.1: `npm version patch --no-git-tag-version`,
+actualiza CHANGELOG y crea `release-notes/v4.2.1.md`, usa `npm ci`, compila y revisa,
 haz commit/push y repite desde el paso 3 con la nueva versión. Nunca reemplaces
 una versión publicada con binarios distintos; publica otra versión.
 
 ## Alternativa con la web
 
 Tras subir main y la etiqueta, abre Releases > Draft a new release, selecciona
-la etiqueta v4.1.0, copia las notas y adjunta los cuatro archivos. Guarda el borrador
+la etiqueta v4.2.0, copia las notas y adjunta los cuatro archivos. Guarda el borrador
 para revisar; usa Publish release solamente al final.
 
 ## Referencias oficiales

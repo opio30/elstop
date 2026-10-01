@@ -1,14 +1,18 @@
 {
   "name": "etiquetas-tienda-pro",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Etiquetas Tienda Pro - inventario, promociones y etiquetas termicas",
   "main": "main.js",
-  "author": "Etiquetas Tienda Pro",
+  "author": "EL STOP",
   "license": "UNLICENSED",
   "scripts": {
     "start": "electron .",
-    "build:win": "electron-builder --win nsis --x64 --publish never",
-    "build:portable": "electron-builder --win portable --x64 --publish never"
+    "build:win": "npm run preparar:claves && electron-builder --win nsis --x64 --publish never",
+    "build:portable": "npm run preparar:claves && electron-builder --win portable --x64 --publish never",
+    "build:signed": "powershell -NoProfile -File scripts/Compilar-Firmado.ps1",
+    "preparar:claves": "node scripts/preparar-claves.js",
+    "prestart": "npm run preparar:claves",
+    "test": "node --test tests/license.test.js"
   },
   "dependencies": {
     "electron-updater": "^6.6.2"
@@ -25,7 +29,8 @@
       "index.html",
       "main.js",
       "preload.js",
-      "package.json"
+      "package.json",
+      "license-manager.js"
     ],
     "directories": {
       "output": "dist"
@@ -55,7 +60,15 @@
         "releaseType": "release"
       }
     ],
-    "artifactName": "Etiquetas-Tienda-Pro-${version}-${arch}.${ext}"
+    "artifactName": "Etiquetas-Tienda-Pro-${version}-${arch}.${ext}",
+    "copyright": "Copyright © 2026 EL STOP",
+    "beforeBuild": "scripts/verificar-clave-build.js",
+    "extraResources": [
+      {
+        "from": "resources/license-public.pem",
+        "to": "license-public.pem"
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -64,5 +77,6 @@
   "homepage": "https://github.com/opio30/elstop",
   "bugs": {
     "url": "https://github.com/opio30/elstop/issues"
-  }
+  },
+  "private": true
 }
